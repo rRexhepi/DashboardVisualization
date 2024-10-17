@@ -119,6 +119,6 @@ dmypy.json
 Thumbs.db
 ehthumbs.db
 
-# Bokeh output
-data/output/Dashboard.html
+# Data
+data/
 
