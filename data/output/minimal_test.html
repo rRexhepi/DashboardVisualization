@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Minimal Bokeh Test Dashboard</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        display: flow-root;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.4.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.4.0.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="c4010151-c981-4b8f-8797-b3d1a0b766d0" data-root-id="p1003" style="display: contents;"></div>
+  
+    <script type="application/json" id="ef98875e-7da5-4faa-954d-d3c9d3a78400">
+      {"cde9c3b2-47da-4d1f-b766-3a4d1aaada7a":{"version":"3.4.0","title":"Bokeh Application","roots":[{"type":"object","name":"Column","id":"p1003","attributes":{"children":[{"type":"object","name":"Div","id":"p1001","attributes":{"width":400,"height":100,"text":"&lt;h1&gt;Hello, Bokeh!&lt;/h1&gt;"}},{"type":"object","name":"Div","id":"p1002","attributes":{"width":400,"height":100,"text":"&lt;p&gt;This is a test of your Bokeh installation.&lt;/p&gt;"}}]}}]}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('ef98875e-7da5-4faa-954d-d3c9d3a78400').textContent;
+              const render_items = [{"docid":"cde9c3b2-47da-4d1f-b766-3a4d1aaada7a","roots":{"p1003":"c4010151-c981-4b8f-8797-b3d1a0b766d0"},"root_ids":["p1003"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
