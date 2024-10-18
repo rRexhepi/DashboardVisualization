@@ -1,10 +1,10 @@
-# British Film Institute (BFI) Spend Dashboard
+# DashboardVisualization
 
 ---
 
 ## 📄 Project Description
 
-The **BFI Spend Dashboard** is an interactive data visualization tool developed using Python's Bokeh library. It provides insights into the British Film Institute's expenditures over £25,000, allowing users to explore, filter, and analyze spending data through intuitive tables and dynamic graphs.
+The **DashboardVisualization** is an interactive data visualization tool developed using Python's Bokeh library. It provides insights into the British Film Institute's expenditures over £25,000, allowing users to explore, filter, and analyze spending data through intuitive tables and dynamic graphs.
 
 ---
 
